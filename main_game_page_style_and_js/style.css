@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    cursor: crosshair;
+}
+main{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #46bc99 ,#f68d42, #ed1965, #f2f0ed, #3a3133);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+main .full_page{
+    width: 95%;
+    height: 95%;
+    background: url(../images/background_im_for_main_page.jpg);
+    background-size:cover;
+    border-radius: 10px;
+    border: 5px solid rgba(110, 92, 143, 0.59);
+
+}
+main .full_page > h1{
+    text-align: center;
+    color: rgba(204, 190, 229, 0.59);
+    font-family: 'Pacifico', cursive;
+
+}
+main .full_page .countdown{
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(120deg, #f68d42, #ed19677a);
+    position: relative;
+    left: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.5);
+
+
+}
+main .full_page .countdown > p{
+    font-size: 20px;
+    position: relative;
+    top: 8px;
+    font-family: 'Permanent Marker', cursive;
+}
+main .full_page .playarea{
+    width: 100%;
+    height: 80%;
+    position: relative;
+    top: 28px;
+    background: rgba(0,0,0,0.5);
+}
+main .full_page .playarea .egg1, .egg2, .egg3{
+    width: 100px;
+    height: 100px;
+    background: url(../images/egg.png);
+    background-size: 50px 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    position: relative;
+ }
+ main .full_page .playarea .broken_egg{
+    width: 100px;
+    height: 100px;
+    background: url(../images/broken-egg.png);
+    background-size: 50px 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+ }
+ main .full_page .playarea .nest{
+    width: 100px;
+    height: 100px;
+    background: url(../images/nest.png);
+    background-size: 70px 70px;
+    position: relative;
+    top: -37px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    position: relative;
+ }
+/*----------------------------Code for dialogBox--------------------------*/
+main .dialog_box{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+
+}
+main .dialog_box .diaog_box_content{
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(120deg, #765438, #a13323, #e65124, #ec7f22, #eb7b2091);
+    position: relative;
+    border-radius: 5px;
+
+}
+main .dialog_box .diaog_box_content .header{
+    width: 95%;
+    height: 50px;
+    background: linear-gradient(120deg, #dd4b39, #ffffff);
+    top: 5px;
+    position: relative;
+    left: 7px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+
+    
+}
+main .dialog_box .diaog_box_content .main_content{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    color: #f4eee8;
+    
+
+}
+main .dialog_box .diaog_box_content button{
+    background: linear-gradient(120deg, #00b2a9, #ffffff) ;
+    border: none;
+    outline: none;
+    width: 120px;
+    height: 30px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 6px 3px #ffffff,
+                -1px -1px 6px 3px #00b2a9;
+    font-family: 'Pacifico', cursive;
+    transition: all 1s;
+}
+main .dialog_box .diaog_box_content button:hover{
+    background: black;
+    color: #00b2a9;
+    box-shadow: none;
+}
+ /*-----------------animations for eggs----------------*/
+ main .full_page .playarea .egg1_animation{
+     animation: egg1 3s linear alternate infinite;
+ }
+ @keyframes egg1{
+    from{
+        left: 0%;
+    }
+    to{
+        left: 88%;
+    }
+ }
+
+ main .full_page .playarea .egg2_animation{
+    animation: egg1 1.5s linear alternate infinite;
+}
+@keyframes egg1{
+   from{
+       left: 0%;
+   }
+   to{
+       left: 88%;
+   }
+}
+
+main .full_page .playarea .egg3_animation{
+    animation: egg1 2s linear alternate infinite;
+}
+@keyframes egg1{
+   from{
+       left: 0%;
+   }
+   to{
+       left: 88%;
+   }
+}
+
+
+@media only screen and (max-width: 600px){
+
+    main .full_page .playarea .egg1_animation{
+        animation: egg1 1s linear alternate infinite;
+        }
+
+   
+    main .full_page .playarea .egg2_animation{
+       animation: egg1 0.40s linear alternate infinite;
+    }
+   
+   main .full_page .playarea .egg3_animation{
+       animation: egg1 0.5s linear alternate infinite;
+    }
+
+   main .full_page .playarea {
+    height: 73%;
+    top: 20px;
+    }
+
+    main .full_page .playarea .egg1, .egg2, .egg3{
+        height: 87px;
+    }
+
+}

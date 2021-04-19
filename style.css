@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: url(./images/Background_img_for_index_page.jpg);
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+    
+}
+main{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+main .middle_box{
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(120deg, #3299cc, #c22424);
+    border-radius:30px;
+    
+}
+main .middle_box h1{
+    font-family: 'Dancing Script', cursive;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: ;
+    text-shadow: 2px 2px 5px #3299cc,
+                 -2px -2px 5px #c22424;
+}
+main .middle_box p,h6{
+    font-size: 15px;
+    font-family: 'Indie Flower', cursive ;
+    margin-bottom: 20px;
+    color: #16213e;
+}
+main .middle_box .start_note{
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(120deg, #c22424, #3299cc);
+    position: relative;
+    left: 25%;
+    border-radius: 15px;
+    animation: ShowShadow 5s ease 3s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@keyframes ShowShadow{
+    from{
+
+    }
+    to{
+        box-shadow: 10px 10px 16px #000000;
+        background: linear-gradient(120deg, #3299cc, #c22424);
+    }
+}
